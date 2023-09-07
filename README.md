@@ -13,6 +13,8 @@
 
 #### Кластер развернут с помощью kubespray в нем уже установлен сетевой плагин Calico
 
+![Yandexcloude vm](https://github.com/ALEMOLOKOV/14.3_K8S_Aleksandr_Molokov/assets/109212419/d14c31ef-f47a-482d-a158-da56d83001e8)
+
 #### Последовательность команд развертывания кластера
 sudo apt update
 
@@ -49,7 +51,7 @@ ansible-playbook -i inventory/mycluster/hosts.yaml cluster.yml -b -v
 
 #### Результат
 
-![kluster UP](https://github.com/ALEMOLOKOV/14.3_K8S_Aleksandr_Molokov/assets/109212419/e9d02c3a-fd78-488e-8c02-f88fae18b8cc)
+![kluster UP](https://github.com/ALEMOLOKOV/14.3_K8S_Aleksandr_Molokov/assets/109212419/cf347c61-0dc9-4640-a5ab-0c974807dd6e)
 
 #### 1. Deployments
 ![Frontend](https://github.com/ALEMOLOKOV/14.3_K8S_Aleksandr_Molokov/blob/6ff3b89b7c197ccd7e2b43da206024663981b8ff/deployment-frontend.yaml)
@@ -58,8 +60,9 @@ ansible-playbook -i inventory/mycluster/hosts.yaml cluster.yml -b -v
 
 ![Cache](https://github.com/ALEMOLOKOV/14.3_K8S_Aleksandr_Molokov/blob/6ff3b89b7c197ccd7e2b43da206024663981b8ff/deployment-cache.yaml)
 
-#### Pods после развертывания манифестов
-![pods](https://github.com/ALEMOLOKOV/14.3_K8S_Aleksandr_Molokov/assets/109212419/0342e005-dfbf-4624-b106-64377824474f)
+#### Состояние объектов
+
+![all objects](https://github.com/ALEMOLOKOV/14.3_K8S_Aleksandr_Molokov/assets/109212419/92d2c843-2932-49cf-bfc3-509f2b9597c0)
 
 #### 2. Создание namespace app
 
@@ -76,8 +79,9 @@ ansible-playbook -i inventory/mycluster/hosts.yaml cluster.yml -b -v
 #### Политика Доступ backend к cache
 ![cache-policy](https://github.com/ALEMOLOKOV/14.3_K8S_Aleksandr_Molokov/blob/6ff3b89b7c197ccd7e2b43da206024663981b8ff/cach-policy.yaml)
 
-#### Проверка доступа fronend-backend-cache
-![Inkedall net1](https://github.com/ALEMOLOKOV/14.3_K8S_Aleksandr_Molokov/assets/109212419/a4c4a107-01ff-4fcf-bedd-f7537f3db114)
+#### Проверка доступа fronend-backend-cache по имени сервиса
+
+![Доступность по сервису](https://github.com/ALEMOLOKOV/14.3_K8S_Aleksandr_Molokov/assets/109212419/801dcc7c-f542-4d56-81f8-8d584e29d301)
 
 
 
